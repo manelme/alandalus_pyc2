@@ -26,5 +26,6 @@ class Instituto_test(unittest.TestCase):
         self.assertEqual(self.institutoA.clasesOcupadas(), 0)
         self.assertEqual(self.institutoB.clasesOcupadas(), 4)
 
+
 if __name__ == '__main__':
     unittest.main()
