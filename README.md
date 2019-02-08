@@ -26,3 +26,11 @@ Todo esto debería de ser igual para Windows o cualquier sistema operativo excep
 ## Scaffolding
 
 De momento voy a crear una carpeta que se llama schollpy donde voy a levantar el venv, que tu no verás pq no esta dentro del repo, por lo que tendrás que hacer algo parecido. A la vez por hay dentro habrá una carpeta con las src y con otra con los test. Ya te contaré :P
+
+## Hacer funcionar test
+
+Para que los test funcionen hay que lanzar la siguiente orden con la clase que se va a testear y el test en la misma carpeta. Es importante que tengamos activado el venv primero
+
+```sh
+python -m unittest -v instituto_test.py
+```
