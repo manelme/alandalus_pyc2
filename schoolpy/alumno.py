@@ -6,11 +6,6 @@ class Alumno():
         self.edad = edad
         self.direccion = direccion
 
-    
-
-
-
-
 
     """def ocuparClase(self):
         self.ocupada = True
