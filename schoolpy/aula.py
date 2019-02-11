@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Aula():
     
     def __init__(self, nombre=None, ocupada=False):

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Alumno():
     
     def __init__(self, nombre=None, apellidos=None, edad=None, direccion=None):
