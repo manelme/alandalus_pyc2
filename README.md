@@ -34,3 +34,9 @@ Para que los test funcionen hay que lanzar la siguiente orden con la clase que s
 ```sh
 python -m unittest -v instituto_test.py
 ```
+
+## Modelo a implementar
+
+Meto un diagrama UML para tenerlo como referencia para implementar, el desarrallo de este modelo se está llevando a cabo en la rama #5, pongo una versión preliminar.
+
+![Diagrama de Clases](./uml/out/alandalus_pyc2/DiagramaClases/DiagramaClases.png)
