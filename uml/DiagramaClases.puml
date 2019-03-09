@@ -1,0 +1,57 @@
+@startuml
+
+Instituto "1" *--- "*" Curso
+Curso "1" *--- "*" Asignatura
+Curso  "1" *--- "1" Tutor
+Asignatura "*" o--- "*" Profesor
+Asignatura "*" o--- "*" Alumno
+Alumno "1" o--- "*" Nota
+Asignatura "1" o--- "*" Nota
+
+Persona <|-- Profesor
+Persona <|-- Alumno
+Persona <|-- Tutor
+
+class Persona {
+    String nombre
+    String apellidos
+    Date fechaNacimiento
+    int calcularEdad()
+    String NombreCompleto()
+}
+class Alumno {
+    Bool calcularPasaCurso()
+    Number calcularNotaMedia()
+}
+class Profesor {
+    Number anyosDeExperiencia
+    Number dineroMes
+    Number calcularNotaMedia()
+}
+class Instituto {
+    String nombre
+    String direccion
+    void methods()
+}
+class Asignatura {
+    String nombre
+    Number calcularNotaMediaAlumnos()
+}
+class Curso {
+    Date comienzoDeCurso
+    Date finDeCurso
+    String nombre
+    Number porcentajeCursoTerminado()
+}
+class Nota {
+    String nombreTarea
+    Enum<tipoTarea> tipoTarea
+    Number valorNumerico
+    String calcularGradoNota()
+}
+enum tipoTarea {
+  EXAMEN
+  ACTIVIDAD
+  PRACTICA
+}
+@enduml
