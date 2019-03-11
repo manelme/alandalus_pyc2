@@ -1,4 +1,4 @@
-@startuml
+@startuml DiagramaClases
 
 Instituto "1" *--- "*" Curso
 Curso "1" *--- "*" Asignatura
@@ -10,12 +10,12 @@ Asignatura "1" o--- "*" Nota
 
 Persona <|-- Profesor
 Persona <|-- Alumno
-Persona <|-- Tutor
+Profesor <|-- Tutor
 
 class Persona {
     String nombre
     String apellidos
-    Date fechaNacimiento
+    datetime fechaNacimiento
     int calcularEdad()
     String NombreCompleto()
 }
@@ -24,22 +24,27 @@ class Alumno {
     Number calcularNotaMedia()
 }
 class Profesor {
-    Number anyosDeExperiencia
+    datetime fechaDeContratacion
     Number dineroMes
     Number calcularNotaMedia()
+    Number antiguedad()
+    Number dineroTotalGanado()
+}
+class Tutor {
+    Number cantidadDeAnyosTutorizando
+    Number trieniosDeTutorizacion()
 }
 class Instituto {
     String nombre
     String direccion
-    void methods()
 }
 class Asignatura {
     String nombre
     Number calcularNotaMediaAlumnos()
 }
 class Curso {
-    Date comienzoDeCurso
-    Date finDeCurso
+    datetime comienzoDeCurso
+    datetime finDeCurso
     String nombre
     Number porcentajeCursoTerminado()
 }
