@@ -17,7 +17,7 @@ class Persona {
     String apellidos
     datetime fechaNacimiento
     int calcularEdad()
-    String NombreCompleto()
+    String nombreCompleto()
 }
 class Alumno {
     Bool calcularPasaCurso()
