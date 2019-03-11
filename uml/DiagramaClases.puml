@@ -5,12 +5,19 @@ Curso "1" *--- "*" Asignatura
 Curso  "1" *--- "1" Tutor
 Asignatura "*" o--- "*" Profesor
 Asignatura "*" o--- "*" Alumno
+Asignatura "1" o--- "1" Aula
+Aula "1" o--- "*" Equipamiento
 Alumno "1" o--- "*" Nota
 Asignatura "1" o--- "*" Nota
 
 Persona <|-- Profesor
 Persona <|-- Alumno
 Profesor <|-- Tutor
+Equipamiento <|-- Mesa
+Equipamiento <|-- Silla
+Equipamiento <|-- Ordenador
+Equipamiento <|-- Proyector
+
 
 class Persona {
     String nombre
@@ -48,6 +55,10 @@ class Curso {
     String nombre
     Number porcentajeCursoTerminado()
 }
+class Aula {
+    Number capacidadMaxima
+    
+}
 class Nota {
     String nombreTarea
     Enum<tipoTarea> tipoTarea
@@ -58,5 +69,14 @@ enum tipoTarea {
   EXAMEN
   ACTIVIDAD
   PRACTICA
+}
+abstract Equipamiento {
+    Number precio
+}
+class Mesa{
+    int capacidad
+}
+class Silla{
+
 }
 @enduml
