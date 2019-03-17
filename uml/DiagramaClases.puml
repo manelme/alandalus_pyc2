@@ -23,12 +23,20 @@ class Persona {
     String nombre
     String apellidos
     datetime fechaNacimiento
+    String localidad
+    String provincia
+    String direccion
+    Number codigoPostal
+    Number telefono
     int calcularEdad()
     String nombreCompleto()
+    String direccionFormateada()
 }
 class Alumno {
+    Bool repetidor
     Bool calcularPasaCurso()
     Number calcularNotaMedia()
+    Bool isRepetidor()
 }
 class Profesor {
     datetime fechaDeContratacion
@@ -44,10 +52,23 @@ class Tutor {
 class Instituto {
     String nombre
     String direccion
+    Number telefono
+    String codigo
+    Number codigoPostal
+    Number fax
+    String web
+    String localidad
+    String provincia
+    String direccionFormateada()
 }
 class Asignatura {
     String nombre
     Number calcularNotaMediaAlumnos()
+    Number totalAprobados()
+    Number totalSobresalientes()
+    Number totalNotables()
+    Number totalAprobados()
+    Number totalSuspensos()
 }
 class Curso {
     datetime comienzoDeCurso
