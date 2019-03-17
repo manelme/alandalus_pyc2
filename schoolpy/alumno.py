@@ -7,6 +7,7 @@ class Alumno():
         self.apellidos = apellidos
         self.edad = edad
         self.direccion = direccion
+        self.telefono = telefono
 
 
     """def ocuparClase(self):

@@ -23,6 +23,8 @@ class Persona {
     String nombre
     String apellidos
     datetime fechaNacimiento
+    String direccion
+    Number telefono
     int calcularEdad()
     String nombreCompleto()
 }
@@ -44,6 +46,11 @@ class Tutor {
 class Instituto {
     String nombre
     String direccion
+    Number telefono
+    String codigo
+    Number codigoPostal
+    Number fax
+    String web
 }
 class Asignatura {
     String nombre
