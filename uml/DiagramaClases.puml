@@ -57,10 +57,18 @@ class Instituto {
     Number codigoPostal
     Number fax
     String web
+    String localidad
+    String provincia
+    String direccionFormateada()
 }
 class Asignatura {
     String nombre
     Number calcularNotaMediaAlumnos()
+    Number totalAprobados()
+    Number totalSobresalientes()
+    Number totalNotables()
+    Number totalAprobados()
+    Number totalSuspensos()
 }
 class Curso {
     datetime comienzoDeCurso
