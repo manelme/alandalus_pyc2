@@ -69,6 +69,7 @@ class Asignatura {
     Number totalNotables()
     Number totalAprobados()
     Number totalSuspensos()
+    
 }
 class Curso {
     datetime comienzoDeCurso
