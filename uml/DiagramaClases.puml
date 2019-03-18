@@ -99,6 +99,16 @@ class Mesa{
     int capacidad
 }
 class Silla{
-
+    boolean ruedas
+}
+Class Proyector{
+    String resolucion
+    Number lumens 
+}
+Class Ordenador{
+    String cpuname
+    Number cpuspeed
+    int ram
+    int hd
 }
 @enduml
