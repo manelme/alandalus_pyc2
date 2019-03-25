@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "2e04f111-80c7-458e-8f40-67791bb99dc6",
+		"name": "alandalus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getInstitutos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/instituto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"instituto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postInstituto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/instituto?nombre=AlAndalus&codigo=001&fax=666666666&web=http://alandalus.com&id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"instituto"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "AlAndalus"
+						},
+						{
+							"key": "codigo",
+							"value": "001"
+						},
+						{
+							"key": "fax",
+							"value": "666666666"
+						},
+						{
+							"key": "web",
+							"value": "http://alandalus.com"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInstituto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/instituto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"instituto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteInstituto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/instituto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"instituto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
