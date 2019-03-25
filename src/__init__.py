@@ -3,6 +3,7 @@
 import markdown
 import os
 import shelve
+from instituto import Instituto
 
 # Import the framework
 from flask import Flask, g
@@ -17,7 +18,7 @@ api = Api(app)
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-        db = g._database = shelve.open("hs.db")
+        db = g._database = shelve.open("data/hs.db")
     return db
 
 @app.teardown_appcontext
@@ -63,11 +64,12 @@ class Institutos(Resource):
 
                 # Parse the arguments into an object
                 args = parser.parse_args()
+                instituto = Instituto(args.__getattr__(id),args.__getattr__(nombre),args.__getattr__(codigo),args.__getattr__(fax),args.__getattr__(web))
 
                 shelf = get_db()
-                shelf[args['id']] = args
+                shelf[instituto.id] = instituto
 
-                return {'message': 'Instituto registered', 'data': args}, 201
+                return {'message': 'Instituto registered', 'data': instituto}, 201
 
 class Instituto(Resource):
         def get(self, id):

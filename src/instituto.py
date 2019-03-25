@@ -5,7 +5,8 @@ from aula import Aula
 class Instituto():
     
     
-    def __init__(self, nombre=None, codigo = None, fax=None, web=None, aulas=None):
+    def __init__(self, id=None, nombre=None, codigo = None, fax=None, web=None, aulas=None):
+        self.id = id
         self.nombre = nombre
         self.codigo = codigo
         self.fax = fax
