@@ -16,7 +16,7 @@ virtualenv venv #Asi se crea por primera vez el virtualenv, en este caso se llam
 Veras que cuando ejecutas la orden se te crea una varpeta llamada venv, todas las dependencias se trasladarán hay, para entrar y salir en el virtualenv tienes que usar estas ordenes
 
 ```sh
-source venv/bin/activate #Esto para activarlo estando dentro de la carpeta principal del proyecto
+venv/bin/activate #Esto para activarlo estando dentro de la carpeta principal del proyecto
 
 deactivate #Para salir del venv y volver a tu terminal normal :P
 ```
