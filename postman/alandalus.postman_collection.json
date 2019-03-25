@@ -15,11 +15,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost/instituto",
+					"raw": "http://localhost:{{port}}/instituto",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
+					"port": "{{port}}",
 					"path": [
 						"instituto"
 					]
@@ -37,11 +38,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost/instituto?nombre=AlAndalus&codigo=001&fax=666666666&web=http://alandalus.com&id=1",
+					"raw": "http://localhost:{{port}}/instituto?nombre=AlAndalus&codigo=001&fax=666666666&web=http://alandalus.com&id=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
+					"port": "{{port}}",
 					"path": [
 						"instituto"
 					],
@@ -81,11 +83,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost/instituto/1",
+					"raw": "http://localhost:{{port}}/instituto/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
+					"port": "{{port}}",
 					"path": [
 						"instituto",
 						"1"
@@ -104,11 +107,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost/instituto/1",
+					"raw": "http://localhost:{{port}}/instituto/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
+					"port": "{{port}}",
 					"path": [
 						"instituto",
 						"1"
