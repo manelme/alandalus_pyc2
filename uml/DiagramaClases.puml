@@ -1,16 +1,16 @@
 @startuml DiagramaClases
 
-Instituto "1" *--- "0..*" Curso
-Instituto "1" *--- "1..*" Contacto
-Curso "1" *--- "0..*" Asignatura
-Curso  "1" *--- "1" Tutor
-Asignatura "0..*" o--- "*" Profesor
-Asignatura "0..*" o--- "0..*" Alumno
-Asignatura "1" o--- "1" Aula
-Aula "1" o--- "0..*" Equipamiento
-Alumno "1" o--- "0..*" Nota
-Asignatura "1" o--- "0..*" Nota
-Persona "1" *--- "1..*" Contacto
+Instituto "1" *--- "0..*" Curso : cursos >
+Instituto "1" *--- "1*" Contacto : info_contacto >
+Curso "1" *--- "0..*" Asignatura : asignaturas >
+Curso  "1" *--- "1" Tutor : tutor >
+Asignatura "0..*" o--- "*" Profesor : profesores >
+Asignatura "0..*" o--- "0..*" Alumno : alumnos >
+Asignatura "1" o--- "1" Aula : aula >
+Aula "1" o--- "0..*" Equipamiento : equipamiento >
+Alumno "1" o--- "0..*" Nota : notas >
+Asignatura "1" o--- "0..*" Nota : notas >
+Persona "1" *--- "1..*" Contacto : infoContactos >
 
 Persona <|-- Profesor
 Persona <|-- Alumno
@@ -24,69 +24,70 @@ Equipamiento <|-- Proyector
 class Persona {
     String nombre
     String apellidos
-    datetime fechaNacimiento
-    int calcularEdad()
-    String nombreCompleto()
-    String direccionFormateada()
+    datetime fecha_nacimiento
+    int calcular_edad()
+    String nombre_completo()
+    String direccion_formateada()
 }
 class Contacto {
     String localidad
     String provincia
     String direccion
-    Number codigoPostal
-    Number telefono
+    String codigo_postal
+    String telefono
 }
 class Alumno {
     Bool repetidor
-    Bool calcularPasaCurso()
-    Number calcularNotaMedia()
+    Bool calcular_pasa_curso()
+    Number calcular_nota_media()
     Bool isRepetidor()
 }
 class Profesor {
-    datetime fechaDeContratacion
-    Number dineroMes
-    Number calcularNotaMedia()
+    datetime fecha_de_contratacion
+    Number dinero_mes
+    Number calcular_nota_media()
     Number antiguedad()
-    Number dineroTotalGanado()
+    Number dinero_total_ganado()
 }
 class Tutor {
-    Number cantidadDeAnyosTutorizando
-    Number trieniosDeTutorizacion()
+    Number cantidad_anyos_tutorizando
+    Number trienios_tutorizacion()
 }
 class Instituto {
+    String id
     String nombre
     String codigo
-    Number fax
+    String fax
     String web
-    String direccionFormateada()
+    String direccion_textual()
 }
 class Asignatura {
     String nombre
-    Number calcularNotaMediaAlumnos()
-    Number totalAprobados()
-    Number totalSobresalientes()
-    Number totalNotables()
-    Number totalAprobados()
-    Number totalSuspensos()
+    Number calcular_nota_media_alumnos()
+    Number total_aprobados()
+    Number total_sobresalientes()
+    Number total_notables()
+    Number total_aprobados()
+    Number total_suspensos()
     
 }
 class Curso {
-    datetime comienzoDeCurso
-    datetime finDeCurso
+    datetime comienzo_de_curso
+    datetime fin_de_curso
     String nombre
-    Number porcentajeCursoTerminado()
+    Number porcentaje_curso_terminado()
 }
 class Aula {
-    Number capacidadMaxima
+    Number capacidad_maxima
     
 }
 class Nota {
-    String nombreTarea
-    Enum<tipoTarea> tipoTarea
-    Number valorNumerico
-    String calcularGradoNota()
+    String nombre_tarea
+    Enum<TipoTarea> tipo_tarea
+    Number valor_numerico
+    String calcular_gradoNota()
 }
-enum tipoTarea {
+enum TipoTarea {
   EXAMEN
   ACTIVIDAD
   PRACTICA
@@ -105,8 +106,8 @@ Class Proyector{
     Number lumens 
 }
 Class Ordenador{
-    String cpuname
-    Number cpuspeed
+    String cpu_name
+    Number cpu_speed
     int ram
     int hd
 }
