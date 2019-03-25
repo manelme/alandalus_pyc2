@@ -39,4 +39,4 @@ python -m unittest -v instituto_test.py
 
 Meto un diagrama UML para tenerlo como referencia para implementar, el desarrallo de este modelo se está llevando a cabo en la rama #5, pongo una versión preliminar.
 
-![Diagrama de Clases](./uml/out/alandalus_pyc2/uml/DiagramaClases/DiagramaClases.png)
+![Diagrama de Clases](./uml/out/uml/DiagramaClases/DiagramaClases.png)
